@@ -7,7 +7,11 @@ export default defineConfig({
   plugins: [
     vue(),
     Components({
-      resolvers: [AntDesignVueResolver()],
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: 'less',
+        }),
+      ],
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),

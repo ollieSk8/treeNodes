@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="tree-demo">
+    <div>当前选择的节点id集合{{ formState.AllCheckedKeys }}</div>
     <TreeList :treeNodes="formState.treeNodes" :AllCheckedKeys="formState.AllCheckedKeys" />
   </div>
 </template>
@@ -18,4 +19,8 @@
   });
   formState.treeNodes = treeNodes;
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+  .tree-demo {
+    padding: 30px;
+  }
+</style>
